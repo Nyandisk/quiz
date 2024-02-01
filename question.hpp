@@ -1,8 +1,9 @@
 // 1/2/2024 - nyandisk :D
-//do whatever your heart desires with this code
-//it might even be better if you do
-//since i'm not the best at writing C++
-
+/* 
+do whatever your heart desires with this code
+it might even be better if you do
+since i'm not the best at writing C++
+*/
 #pragma once
 
 #include <string>
@@ -57,9 +58,9 @@ namespace quiz{
             std::cout << getPrompt() << std::endl;
             std::cout << "-> ";
             std::string userGuess;
-            std::cin >> userGuess;
+            std::getline(std::cin, userGuess);
             delim();
-            bool correct = (caseSensitive ? (correctAnswer == userGuess) : (toLowercase(correctAnswer) == toLowercase(userGuess)));
+            bool correct = this->isCorrect(userGuess);
             if (correct) {
                 std::cout << CORRECT << std::endl;
             }
@@ -69,11 +70,23 @@ namespace quiz{
             return correct;
         }
     private:
-        std::string toLowercase(const std::string& str) const {
-            std::string result = str;
-            std::transform(result.begin(), result.end(), result.begin(),
-                [](unsigned char c) { return std::tolower(c); });
-            return result;
+        bool isCorrect(const std::string& str) const {
+            if (this->caseSensitive) {
+                return str == this->correctAnswer;
+            }
+            else {
+                return toLowercase(str) == toLowercase(this->correctAnswer);
+            }
+        }
+        std::string toLowercase(const std::string& str) const{
+            std::string lowerCaseStr;
+            lowerCaseStr.reserve(str.size());
+
+            for (char c : str) {
+                lowerCaseStr.push_back(std::tolower(c));
+            }
+
+            return lowerCaseStr;
         }
     };
     /// <summary>
