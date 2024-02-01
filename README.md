@@ -6,7 +6,7 @@ A simple library I made for creating short multiple choice or typing questions. 
  - Copy `question.hpp` into your project and include it
  - Instantiate a question (`quiz::MSQuestion` or `quiz::TypingQuestion`)
  - Call the question instance's `.ask()` function
-   - *Optional: Store the `.ask()` function's return value (whether the question was answered correctly or not) in a variable for later use
+   - *Optional: Store the `.ask()` function's return value (whether the question was answered correctly or not) in a variable for later use*
 
 # Example
 ```cpp
