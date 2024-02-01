@@ -1,9 +1,9 @@
 // 1/2/2024 - nyandisk :D
-/* 
-do whatever your heart desires with this code
-it might even be better if you do
-since i'm not the best at writing C++
-*/
+ 
+//do whatever your heart desires with this code
+//it might even be better if you do
+//since i'm not the best at writing C++
+
 #pragma once
 
 #include <string>
