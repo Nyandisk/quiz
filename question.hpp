@@ -58,6 +58,7 @@ namespace quiz{
             std::cout << getPrompt() << std::endl;
             std::cout << "-> ";
             std::string userGuess;
+            std::cin.clear();
             std::getline(std::cin, userGuess);
             delim();
             bool correct = this->isCorrect(userGuess);
