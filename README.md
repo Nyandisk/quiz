@@ -1,6 +1,6 @@
 # quiz
 
-A simple library I made for creating short multiple choice or typing questions. It is in no way perfect, but works enough to make studying school things easier.
+A simple library I made for creating short multiple choice or typing questions. It is in no way perfect, but works enough to make my inefficient study methods somewhat efficient.
 
 # Usage
  - Copy `question.hpp` into your project and include it
