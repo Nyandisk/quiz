@@ -15,7 +15,7 @@ namespace quiz{
 
     // Constants for different strings | not necessarily needed but making changes is easier.
     const std::string CORRECT = "[*] You are correct!";
-    const std::string INCORRECT = "[!] Nuh uh. It is in fact: ";
+    const std::string INCORRECT = "[!] Incorrect. It is in fact: ";
     const std::string INT_CONVERSION_ERROR = "Couldn't convert your answer into an integer. Try again.";
     const std::string RANGE_EXCEPTION = "Your answer is out of range. Try again.";
 
